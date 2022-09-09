@@ -1,24 +1,24 @@
 ﻿double[,] CreateMatrix(int rowCount, int columnCount, int max, int min)
 {
-    double[,] array = new double[rowCount, columnCount];
+    double[,] matrix = new double[rowCount, columnCount];
     for (int row = 0; row < rowCount; row++)
     {
         for (int column = 0; column < columnCount; column++)
         {
-            array[row, column] = Math.Round(new Random().NextDouble() * (max - min) + min, 1);
+            matrix[row, column] = Math.Round(new Random().NextDouble() * (max - min) + min, 1);
         }
     }
-    return array;
+    return matrix;
 }
 
-void PrintMatrix(double[,] array)
+void PrintMatrix(double[,] matrix)
 {
-    for (int row = 0; row < array.GetLength(0); row++)
+    for (int row = 0; row < matrix.GetLength(0); row++)
     {
         Console.Write($"|\t");
-        for (int column = 0; column < array.GetLength(1); column++)
+        for (int column = 0; column < matrix.GetLength(1); column++)
         {
-            Console.Write($"{array[row, column]}\t");
+            Console.Write($"{matrix[row, column]}\t");
         }
         Console.Write("|");
         Console.WriteLine();
@@ -41,5 +41,5 @@ int min = InputVariable();
 Console.Write($"Введите максимальную грацицу диапазона чисел: ");
 int max = InputVariable();
 
-double[,] array = CreateMatrix(rowCount, columnCount, min, max);
-PrintMatrix(array);
+double[,] matrix = CreateMatrix(rowCount, columnCount, min, max);
+PrintMatrix(matrix);
