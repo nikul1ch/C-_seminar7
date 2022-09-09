@@ -46,6 +46,5 @@ int min = Convert.ToInt32(Console.ReadLine());
 Console.Write($"Введите максимальную грацицу диапазона чисел: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
-
 double[,] array = CreateMatrix(rowCount, columnCount, min, max);
 PrintMatrix(array);
